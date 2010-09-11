@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>jQuery Seven Segment Array</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.sevenseg.js"></script>
+<script type="text/javascript" src="jquery.timer.js"></script>
+<script type="text/javascript">
+$(function() {
+	var time = new Date();
+	var hours;
+	var mins;
+	var secs;
+	
+	timer = $.timer(1000, function() {
+		time = new Date();
+		
+		hours = time.getHours().toString();
+		var splitHour = hours.split("");
+		if (hours.length == 1) {
+			$("#t1").sevenSeg(0);
+			$("#t2").sevenSeg(parseInt(splitHour[0]));
+		}else{
+			$("#t1").sevenSeg(parseInt(splitHour[0]));
+			$("#t2").sevenSeg(parseInt(splitHour[1]));
+		}
+		
+		mins = time.getMinutes().toString();
+		var splitMin = mins.split("");
+		if(mins.length == 1) {
+			$("#t4").sevenSeg(0);
+			$("#t5").sevenSeg(parseInt(splitMin[0]));
+		}else{
+			$("#t4").sevenSeg(parseInt(splitMin[0]));
+			$("#t5").sevenSeg(parseInt(splitMin[1]));
+		}
+		
+		secs = time.getSeconds().toString();
+		var splitSec = secs.split("");
+		if(secs.length == 1) {
+			$("#t7").sevenSeg(0);
+			$("#t8").sevenSeg(parseInt(splitSec[0]));
+		}else{
+			$("#t7").sevenSeg(parseInt(splitSec[0]));
+			$("#t8").sevenSeg(parseInt(splitSec[1]));
+		}
+		
+	});
+});
+</script>
+<style type="text/css">
+body { font-family: Arial, Helvetica, sans-serif; font-size: 36px;}
+.wideSeg {
+	width: 125px;
+	height: 36px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+.longSeg {
+	height: 125px;
+	width: 36px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+.leftSeg { float: left; margin-right: 54px; }
+.rightSeg { float: left; }
+.norHighlt { background-color: #CCC; }
+.segHighlt { background-color: #F00; }
+.clear { clear: both; }
+</style>
+</head>
+
+<body>
+<table style="width: 100%">
+	<tr>
+		<td id="t1">
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+		</td>
+		<td id="t2">
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+		</td>
+		<td id="t3">:</td>
+		<td id="t4">
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+		</td>
+		<td id="t5">
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+		</td>
+		<td id="t6">:</td>
+		<td id="t7">
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+		</td>
+		<td id="t8">
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+			<div class="longSeg leftSeg"></div>
+			<div class="longSeg rightSeg"></div>
+			<div class="clear"></div>
+			<div class="wideSeg"></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

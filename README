@@ -1,0 +1,6 @@
+jQuery Seven Segment Array
+Proof of concept by James Brooks (http://www.jbrooksuk.eu)
+
+The jquery.sevenseg.js defines 9 array elements which match the decimal numbr system.
+
+Using the same principles, letters and some symbols could also be created through this system.
