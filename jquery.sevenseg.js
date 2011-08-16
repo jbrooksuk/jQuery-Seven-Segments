@@ -3,23 +3,23 @@
 	jQuery Seven Segment (LCD) Array
 	jTutorials (www.jtutorials.co.cc)
 	
-	Coded by James Brooks 2009 (www.james-brooks.net)
+	Written by James Brooks 2009 (me.itslimetime.com)
+	Updated 2011
 */
 
 jQuery.fn.sevenSeg = function(segment) {
-	var segNumbers = Array(
-		Array(0, Array(1, 4, 5, 6, 7, 3)),
-		Array(1, Array(4, 6)),
-		Array(2, Array(1, 5, 2, 6, 5, 3)),
-		Array(3, Array(1, 5, 2, 7, 3)),
-		Array(4, Array(4, 2, 5, 7)),
-		Array(5, Array(1, 4, 2, 7, 3)),
-		Array(6, Array(1, 4, 2, 6, 7, 3)),
-		Array(7, Array(1, 5, 7)),
-		Array(8, Array(1, 2, 3, 4, 5, 6, 7)),
-		Array(9, Array(1, 4, 5, 2, 7)),
-		Array(10, Array())
-	);
+	var segNumbers = [
+		[0, [1, 4, 5, 6, 7, 3]],		// 0
+		[1, [4, 6]],					// 1
+		[2, [1, 5, 2, 6, 5, 3]],		// 2
+		[3, [1, 5, 2, 7, 3]],			// 3
+		[4, [4, 2, 5, 7]],				// 4
+		[5, [1, 4, 2, 7, 3]],			// 5
+		[6, [1, 4, 2, 6, 7, 3]],		// 6
+		[7, [1, 5, 7]],					// 7
+		[8, [1, 2, 3, 4, 5, 6, 7]],		// 8
+		[9, [1, 4, 5, 2, 7]]			// 9
+	];
 
 	var segID = 1;
 	this.find(".wideSeg").each(function() {
