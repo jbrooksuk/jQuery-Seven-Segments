@@ -1,12 +1,3 @@
-/*
-	--- Proof of Concept ---
-	jQuery Seven Segment (LCD) Array
-	jTutorials (www.jtutorials.co.cc)
-	
-	Written by James Brooks 2009 (me.itslimetime.com)
-	Updated 2011
-*/
-
 jQuery.fn.sevenSeg = function(segment) {
 	var segNumbers = [
 		[0, [1, 4, 5, 6, 7, 3]],		// 0
