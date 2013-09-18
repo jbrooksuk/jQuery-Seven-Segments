@@ -21,30 +21,30 @@ $(function() {
 		var splitHour = hours.split("");
 		if (hours.length == 1) {
 			$("#t1").sevenSeg(0);
-			$("#t2").sevenSeg(parseInt(splitHour[0]));
+			$("#t2").sevenSeg(parseInt(splitHour[0], 10));
 		}else{
-			$("#t1").sevenSeg(parseInt(splitHour[0]));
-			$("#t2").sevenSeg(parseInt(splitHour[1]));
+			$("#t1").sevenSeg(parseInt(splitHour[0], 10));
+			$("#t2").sevenSeg(parseInt(splitHour[1], 10));
 		}
 		
 		mins = time.getMinutes().toString();
 		var splitMin = mins.split("");
 		if(mins.length == 1) {
 			$("#t4").sevenSeg(0);
-			$("#t5").sevenSeg(parseInt(splitMin[0]));
+			$("#t5").sevenSeg(parseInt(splitMin[0], 10));
 		}else{
-			$("#t4").sevenSeg(parseInt(splitMin[0]));
-			$("#t5").sevenSeg(parseInt(splitMin[1]));
+			$("#t4").sevenSeg(parseInt(splitMin[0], 10));
+			$("#t5").sevenSeg(parseInt(splitMin[1], 10));
 		}
 		
 		secs = time.getSeconds().toString();
 		var splitSec = secs.split("");
 		if(secs.length == 1) {
 			$("#t7").sevenSeg(0);
-			$("#t8").sevenSeg(parseInt(splitSec[0]));
+			$("#t8").sevenSeg(parseInt(splitSec[0], 10));
 		}else{
-			$("#t7").sevenSeg(parseInt(splitSec[0]));
-			$("#t8").sevenSeg(parseInt(splitSec[1]));
+			$("#t7").sevenSeg(parseInt(splitSec[0], 10));
+			$("#t8").sevenSeg(parseInt(splitSec[1], 10));
 		}
 		
 	});
