@@ -35,7 +35,7 @@ jQuery.fn.sevenSeg = function(segment) {
 		segID += 1;
 	});
 	
-	makeArray(this, segment);
+	makeArray(this, parseInt(segment, 10));
 
 	function makeArray(segBlock, whichSeg) {
 		var segBlock = $(segBlock);
